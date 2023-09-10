@@ -1,0 +1,11 @@
+﻿  Game.cpp
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(185,37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(191,37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(197,37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(203,37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(248,19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(269,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(295,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(306,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(443,32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  JustBeatAndShape.vcxproj -> C:\Users\coppe\Desktop\JustBeatAndShape\Debug\JustBeatAndShape.exe
