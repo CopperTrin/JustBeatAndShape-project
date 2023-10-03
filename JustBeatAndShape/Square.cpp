@@ -19,7 +19,7 @@ void Square::initSquare()
 	this->currentFrame = ::sf::IntRect(0, 0, 150, 150);
 	this->square.setTextureRect(this->currentFrame);
 	this->square.setScale(0.2f, 0.2f);
-
+	
 }
 
 void Square::initAnimations()
@@ -27,7 +27,8 @@ void Square::initAnimations()
 	this->animationTimer.restart();
 }
 
-Square::Square(float pos_x, float pos_y)
+Square::Square(float pos_x, float pos_y, int type)
+	:type(type)
 {
 	this->initVariable();
 	this->initTexture();
@@ -50,9 +51,10 @@ const sf::Vector2f& Square::Square::getPos() const
 	return this->square.getPosition();
 }
 
-void Square::move(const float dirX)
+void Square::move()
 {
-	this->square.move(7 * dirX, 0);
+	if (this->type == DEFAULTSQUARE)this->square.move(7, 0);
+	if(this->type == SQUARE2) this->square.move(-7, 0);
 }
 
 void Square::updateAnimations()

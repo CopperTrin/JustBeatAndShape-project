@@ -23,9 +23,13 @@ public:
 
 	//Accessor
 	const sf::CircleShape getShape() const;
+	const sf::FloatRect getBound() const;
 	const int& getType() const;
 
 	//Functions
+	void move();
+	void resize();
+	void setPosition(const sf::Vector2f& newPosition);
 	void setType(int type);
 	void update();
 	void render(sf::RenderTarget& target);

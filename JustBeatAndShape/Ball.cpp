@@ -50,9 +50,33 @@ const sf::CircleShape Ball::getShape() const
 	return this->shape;
 }
 
+const sf::FloatRect Ball::getBound() const
+{
+	return this->shape.getGlobalBounds();
+}
+
 const int& Ball::getType() const
 {
 	return this->type;
+}
+
+
+void Ball::move()
+{
+	
+	this->shape.move(-3.f, 0.f);
+}
+
+void Ball::resize()
+{
+	float newRadius = shape.getRadius() + 0.5f;
+	shape.setRadius(newRadius);
+	
+}
+
+void Ball::setPosition(const sf::Vector2f& newPosition)
+{
+	this->shape.setPosition(newPosition);
 }
 
 

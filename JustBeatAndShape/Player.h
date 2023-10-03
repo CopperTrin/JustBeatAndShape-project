@@ -27,12 +27,13 @@ private:
 
 	//Private Funtions
 	void applyKnockback();
-	void initVariable();
 	void initTexture();
-	void initShape();
+	
 
 public:
-
+	void initVariable();
+	void initShape();
+	
 	//Con /Decon
 	Player();
 	virtual ~Player();
@@ -48,6 +49,7 @@ public:
 	void setPosition(const sf::Vector2f pos);
 	void setPosition(const float x, const float y);
 	void loseHp(const int value);
+	void healHp();
 
 	//Update / Render
 	void updateDash();

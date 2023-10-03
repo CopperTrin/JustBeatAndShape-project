@@ -22,6 +22,7 @@ void Player::initVariable()
 	this->spaceKeyPressed = false;
 	this->hpMax = 3;
 	this->hp = hpMax;
+	this->shape.setPosition(60, 450);
 }
 
 void Player::initTexture()
@@ -41,7 +42,6 @@ void Player::initTexture()
 	{
 		std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
 	}
-	
 }
 
 void Player::initShape()
@@ -58,7 +58,6 @@ Player::Player()
 {
 	this->isDashing = false;
 	this->initVariable();
-	this->shape.setPosition(60, 450);
 	this->initTexture();
 	this->initShape();
 }
@@ -141,6 +140,21 @@ void Player::loseHp(const int value)
 
 	knockbackDirection = sf::Vector2f((rand() % 3 - 1), (rand() % 3 - 1)); 
 	knockbackDistance = 100.f; 
+}
+
+void Player::healHp()
+{
+	if(this->hp < this->hpMax)
+	this->hp += 1;
+
+	if (this->hp == 3)
+		this->shape.setTexture(this->texture1);
+	else if (this->hp == 2)
+		this->shape.setTexture(this->texture2);
+	else if (this->hp == 1)
+		this->shape.setTexture(this->texture3);
+	if (this->hp < 0)
+		this->hp = 0;
 }
 
 

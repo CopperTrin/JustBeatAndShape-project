@@ -7,20 +7,60 @@ void Spike::initVariable()
 
 void Spike::initTexture()
 {
-	if (!this->texture.loadFromFile("Texture/spikeSheet.png"))
-	{
-		std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
-	}
+		if (!this->texture.loadFromFile("Texture/spikeSheet.png"))
+		{
+			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
+		}
+		
+		if (!this->texture2.loadFromFile("Texture/spikeSheet2.png"))
+		{
+			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
+		}
+
+		if (!this->texture3.loadFromFile("Texture/Circle.png"))
+		{
+			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
+		}
+		if (!this->texture4.loadFromFile("Texture/WaveSheet.png"))
+		{
+			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
+		}
+	
 }
+
 
 void Spike::initSpike()
 {
-	this->spike.setTexture(this->texture);
-	this->currentFrame = ::sf::IntRect(0, 0, 200, 200);
-	this->spike.setTextureRect(this->currentFrame);
 
-	//Resize
-	this->spike.setScale(0.8f, 0.8f);
+	switch (this->type)
+	{
+	case DEFAULTSPIKE:
+		this->spike.setTexture(this->texture);
+		this->currentFrame = ::sf::IntRect(0, 0, 200, 200);
+		this->spike.setTextureRect(this->currentFrame);
+
+		//Resize
+		this->spike.setScale(0.8f, 0.8f);
+		break;
+		
+	case SPIKE2:
+		this->spike.setTexture(this->texture2);
+		this->currentFrame = ::sf::IntRect(0, 0, 200, 200);
+		this->spike.setTextureRect(this->currentFrame);
+
+		//Resize
+		this->spike.setScale(0.8f, 0.8f);
+		break;
+	case BIGCIRCLE:
+		this->spike.setTexture(this->texture3);
+		break;
+	case WAVE:
+		this->spike.setTexture(this->texture4);
+		this->currentFrame = ::sf::IntRect(0, 0, 1600, 196);
+		this->spike.setTextureRect(this->currentFrame);
+		break;
+	}
+	
 }
 
 void Spike::initAnimations()
@@ -28,7 +68,8 @@ void Spike::initAnimations()
 	this->animationTimer.restart();
 }
 
-Spike::Spike(float pos_x, float pos_y)
+Spike::Spike(float pos_x, float pos_y, int type)
+	:type(type)
 {
 	this->initTexture();
 	this->initSpike();
@@ -52,22 +93,40 @@ const sf::Vector2f& Spike::getPos() const
 
 void Spike::updateAnimations()
 {
-	if (this->animationTimer.getElapsedTime().asSeconds() > 0.015f) 
+	if (this->type == DEFAULTSPIKE || this->type == SPIKE2)
 	{
-		this->currentFrame.left += 200.f;
-		if (this->currentFrame.left >= 2000.f)
-			this->currentFrame.left = 0.f;
+		if (this->animationTimer.getElapsedTime().asSeconds() > 0.015f)
+		{
+			this->currentFrame.left += 200.f;
+			if (this->currentFrame.left >= 2000.f)
+				this->currentFrame.left = 0.f;
 
-		this->spike.setTextureRect(this->currentFrame);
+			this->spike.setTextureRect(this->currentFrame);
 
-		this->animationTimer.restart();
+			this->animationTimer.restart();
+		}
 	}
+	else if  (this->type == WAVE)
+	{
+		if (this->animationTimer.getElapsedTime().asSeconds() > 0.025f)
+		{
+			this->currentFrame.top += 196.f;
+			if (this->currentFrame.top >= 3528.f)
+				this->currentFrame.top = 0.f;
+			
+
+			this->spike.setTextureRect(this->currentFrame);
+
+			this->animationTimer.restart();
+		}
+	}
+	
 }
 
 //Function
 void Spike::update()
 {
-	this->spike.move(-5.f, 0.f);
+	if (this->type == !WAVE)this->spike.move(-5.f, 0.f);
 	this->updateAnimations();
 }
 
