@@ -4,8 +4,10 @@
 #include <ctime>
 #include <cmath>
 #include <vector>
+#include <fstream>
 #include <sstream>
 #include <iomanip>
+#include <string>
 
 #include"Player.h"
 #include"Ball.h"
@@ -32,17 +34,30 @@ private:
 	int lastEsc;
 	int lastClick;
 	int lastDashTime;
+	int biglineSpawnTime;
 	int preparingRecSpawnTime;
 	int cooldownButton;
 	bool selectBeatmap;
+	bool entername;
+	bool entername2;
+	bool entername3;
+	bool leaderboard;
 	bool beatmap1;
 	bool beatmap2;
 	bool beatmap3;
 	bool pause;
 	bool pauseMenu;
+	bool tutorialMenu = true;
 	bool music1;
 	float runtime;
 	bool wave;
+	bool cloudBackground;
+	bool nameUpdate;
+	int iframeCooldownMax;
+	int ifrrameCooldown;
+	bool readyToHit;
+	bool gameOverSound;
+	bool youWonSound;
 	
 	bool escHeld;
 	bool playButtonSelected;
@@ -55,6 +70,7 @@ private:
 	bool leaveButtonSelected;
 	bool mainmenuButtonSelected;
 	bool restartButtonSelected;
+	bool entergameButtonSelected;
 	
 	
 	//Window
@@ -65,15 +81,35 @@ private:
 	//Sound
 	sf::Music music;
 	sf::Music menuMusic;
+	sf::Music gameOverMusic;
+	sf::Music youWonMusic;
 
 	//GUI
 	sf::Font font;
+	sf::Font font2;
 	sf::Text gameOverText;
 	sf::Text winText;
 	sf::Text timeText;
 	sf::Text titleText;
 	sf::Text titleText2;
 	sf::Text titleText3;
+	
+
+	//LeaderBoard
+	std::vector<std::string> playerNames;
+	std::map<std::string, int> playerPoints;
+	std::vector<std::string> playerNames2;
+	std::map<std::string, int> playerPoints2;
+	std::vector<std::string> playerNames3;
+	std::map<std::string, int> playerPoints3;
+
+	sf::Text playerNameText;
+	sf::Text playerListText;
+	sf::Text playerListText2;
+	sf::Text playerListText3;
+
+	
+	
 
 	//ProgessGUI
 	sf::RectangleShape gameProcessBar;
@@ -97,7 +133,26 @@ private:
 	sf::Sprite worldBackgroud;
 	sf::Texture worldBackgroudTex2;
 	sf::Sprite worldBackgroud2;
-	
+	sf::Texture enterWorldBackgroudTex;
+	sf::Sprite enterWorldBackgroud;
+	sf::Texture enterWorldBackgroudTex2;
+	sf::Sprite enterWorldBackgroud2;
+	sf::Texture leaderboardBackgroudTex;
+	sf::Sprite leaderboardBackgroud;
+	sf::Texture gameOverScreenTex1;
+	sf::Sprite gameOverScreen1;
+	sf::Texture gameOverScreenTex2;
+	sf::Sprite gameOverScreen2;
+	sf::Texture gameOverScreenTex3;
+	sf::Sprite gameOverScreen3;
+	sf::Texture youWonScreenTex1;
+	sf::Sprite youWonScreen1;
+	sf::Texture youWonScreenTex2;
+	sf::Sprite youWonScreen2;
+	sf::Texture youWonScreenTex3;
+	sf::Sprite youWonScreen3;
+	sf::Texture tutorialScreenTex;
+	sf::Sprite tutorialSceen;
 
 	//PausedMenu
 	sf::Texture pausedMenuTex;
@@ -124,6 +179,8 @@ private:
 	sf::Texture mainmenuButtonTex;
 	sf::Sprite restartButton;
 	sf::Texture restartButtonTex;
+	sf::Sprite entergameButton;
+	sf::Texture entergameButtonTex;
 
 
 
@@ -142,15 +199,19 @@ private:
 	void initVariable();
 	void initWorld();
 	void initMenu();
+	void initLeaderboard();
 	void initPlayer();
 	void initWindow();
 	void initGUI();
 	void initMusic();
+	void initGameOverMusic();
+	void initYouWonMusic();
 	void initButton();
 	void initMenuMusic();
 	void initPausedMenu();
 	void resetGame();
-
+	void iframe();
+	
 public:
 	
 
@@ -165,10 +226,12 @@ public:
 	//Update / Render
 	const int randSpikeType() const;
 	const int randSmallType() const;
+	const int randSquareType() const;
 	void playMusic();
 	void updatePollEvents();
 	void updateInput();
 	void updatePlayerCollision();
+	void updateName();
 	//Beatmap1
 	void spawnBall();
 	void spawnLine();
@@ -179,9 +242,14 @@ public:
 
 	//Beatmap2
 	void spawnSmall2();
-	void spawnBall2();
 	void spawnRectangle2();
 	void spawnSquare2();
+
+	//Beatmap3
+	void spawnSquare3();
+	void spawnSpike3();
+	void spawnLine3();
+	void spawnLineHeal();
 
 	void updateButtonMain();
 	void updateBall();

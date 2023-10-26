@@ -5,7 +5,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 
-enum LineTypes { DEFAULTLINE = 0, HEALING ,PREPARING,DAMAGINGLINE};
+enum LineTypes { DEFAULTLINE = 0, HEALING ,PREPARING,DAMAGINGLINE,BIGLINE1,BIGLINE2};
 
 class Line
 {
@@ -24,6 +24,7 @@ public:
 	const sf::RectangleShape getShape() const;
 	const sf::FloatRect getBound() const;
 	const int& getType() const;
+	const sf::Vector2f& getSize() const;
 
 	//Functions
 	void move();

@@ -21,11 +21,18 @@ void Spike::initTexture()
 		{
 			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
 		}
-		if (!this->texture4.loadFromFile("Texture/WaveSheet.png"))
+		if (!this->texture4.loadFromFile("Texture/wavenew.png"))
 		{
 			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
 		}
-	
+		if (!this->texture5.loadFromFile("Texture/cloudBackground.png"))
+		{
+			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
+		}
+		if (!this->texture6.loadFromFile("Texture/cloud.png"))
+		{
+			std::cout << "ERROR::PLAYER::INITTEXTURE::Could not load texture file." << "\n";
+		}
 }
 
 
@@ -51,13 +58,17 @@ void Spike::initSpike()
 		//Resize
 		this->spike.setScale(0.8f, 0.8f);
 		break;
-	case BIGCIRCLE:
-		this->spike.setTexture(this->texture3);
-		break;
 	case WAVE:
 		this->spike.setTexture(this->texture4);
 		this->currentFrame = ::sf::IntRect(0, 0, 1600, 196);
 		this->spike.setTextureRect(this->currentFrame);
+		break;
+	case CLOUDBACKGROUND:
+		this->spike.setTexture(this->texture5);
+		break;
+	case CLOUD:
+		this->spike.setTexture(this->texture6);
+		this->spike.setScale(0.5f, 0.5f);
 		break;
 	}
 	
@@ -110,9 +121,9 @@ void Spike::updateAnimations()
 	{
 		if (this->animationTimer.getElapsedTime().asSeconds() > 0.025f)
 		{
-			this->currentFrame.top += 196.f;
-			if (this->currentFrame.top >= 3528.f)
-				this->currentFrame.top = 0.f;
+			this->currentFrame.left += 5.f;
+			if (this->currentFrame.left >= 1600.f)
+				this->currentFrame.left = 0.f;
 			
 
 			this->spike.setTextureRect(this->currentFrame);
@@ -126,7 +137,7 @@ void Spike::updateAnimations()
 //Function
 void Spike::update()
 {
-	if (this->type == !WAVE)this->spike.move(-5.f, 0.f);
+	if (this->type != WAVE && this->type != CLOUDBACKGROUND)this->spike.move(-5.f, 0.f);
 	this->updateAnimations();
 }
 

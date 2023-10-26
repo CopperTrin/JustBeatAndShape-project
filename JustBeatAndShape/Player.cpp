@@ -23,6 +23,9 @@ void Player::initVariable()
 	this->hpMax = 3;
 	this->hp = hpMax;
 	this->shape.setPosition(60, 450);
+	this-> blinkCooldown = 0;
+	this->isWon = false;
+	
 }
 
 void Player::initTexture()
@@ -51,6 +54,36 @@ void Player::initShape()
 	//Resize
 	this->shape.setScale(0.15f, 0.15f);
 }
+
+void Player::initSound()
+{
+	if (!this->music.openFromFile("Music/hitSound.ogg"))
+	{
+		std::cout << "ERROR::GAME::INITMUSIC::COULD NOT LOAD beatmap1.ogg" << "\n";
+	}
+	music.play();
+}
+
+void Player::blinking()
+{
+	if (this->blinkCooldown >= 15)
+	{
+		sf::Color currentColor = this->shape.getColor();
+		if (currentColor.a == 255)
+		{
+			currentColor.a = 50;
+		}
+		else
+		{
+			currentColor.a = 255;
+		}
+		this->shape.setColor(currentColor);
+		this->blinkCooldown = 0;
+	}
+	else blinkCooldown++;
+}
+
+
 
 
 //Con /Decon
@@ -82,6 +115,11 @@ const sf::FloatRect Player::getBound() const
 const int& Player::getHp() const
 {
 	return this->hp;
+}
+
+const bool& Player::getIsWon() const
+{
+	return this->isWon;
 }
 
 
@@ -125,21 +163,30 @@ void Player::setPosition(const float x, const float y)
 	this->shape.setPosition(x, y);
 }
 
+void Player::setColor()
+{
+	this->shape.setColor(sf::Color::White);
+}
+
 void Player::loseHp(const int value)
 {
-	this->hp -= value;
-	// Update the texture based on current hp
-	if (this->hp == 3)
-		this->shape.setTexture(this->texture1);
-	else if (this->hp == 2)
-		this->shape.setTexture(this->texture2);
-	else if (this->hp == 1)
-		this->shape.setTexture(this->texture3);
-	if (this->hp < 0)
-		this->hp = 0;
+	if (this->hp > 0 && this->isWon == false)
+	{
+		this->hp -= value;
+		this->initSound();
+		// Update the texture based on current hp
+		if (this->hp == 3)
+			this->shape.setTexture(this->texture1);
+		else if (this->hp == 2)
+			this->shape.setTexture(this->texture2);
+		else if (this->hp == 1)
+			this->shape.setTexture(this->texture3);
+		if (this->hp < 0)
+			this->hp = 0;
 
-	knockbackDirection = sf::Vector2f((rand() % 3 - 1), (rand() % 3 - 1)); 
-	knockbackDistance = 100.f; 
+		knockbackDirection = sf::Vector2f((rand() % 3 - 1), (rand() % 3 - 1));
+		knockbackDistance = 150.f;
+	}
 }
 
 void Player::healHp()
@@ -155,6 +202,11 @@ void Player::healHp()
 		this->shape.setTexture(this->texture3);
 	if (this->hp < 0)
 		this->hp = 0;
+}
+
+void Player::isWonFunc()
+{
+	this->isWon = true;
 }
 
 
@@ -189,6 +241,7 @@ void Player::update()
 	applyKnockback();
 	this->updateHp();
 	this->updateDash();
+
 }
 
 void Player::render(sf::RenderTarget& target)

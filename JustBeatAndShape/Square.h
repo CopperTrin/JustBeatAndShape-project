@@ -6,14 +6,20 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
-enum SquareTypes { DEFAULTSQUARE = 0, SQUARE2};
+enum SquareTypes { DEFAULTSQUARE = 0, SQUARE2,SQUARE3,TRACKING,MISSILE,MISSLECLEAR};
 	class Square
 	{
 	private:
 		sf::Sprite square;
 		sf::Texture textureSquare;
+		sf::Texture missleTex;
+		sf::Texture bombTex;
+		sf::Texture boomTex;
+		sf::Texture clearTex;
 		sf::IntRect currentFrame;
 		sf::Clock animationTimer;
+		
+		
 		
 
 		//Functions
@@ -23,6 +29,7 @@ enum SquareTypes { DEFAULTSQUARE = 0, SQUARE2};
 		void initAnimations();
 		int type;
 		SquareTypes types;
+		bool isBoom;
 
 	public:
 
@@ -31,9 +38,11 @@ enum SquareTypes { DEFAULTSQUARE = 0, SQUARE2};
 		//Accessor
 		const sf::FloatRect getBound() const;
 		const sf::Vector2f& getPos() const;
+		const int& getType() const;
 
 		//Functions
-		void move();
+		void move(const sf::Vector2f& playerPosition);
+		
 		void updateAnimations();
 		void update();
 		void render(sf::RenderTarget* target);

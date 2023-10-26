@@ -1,14 +1,14 @@
 ﻿  Game.cpp
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(425,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(430,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(436,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(442,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(448,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(534,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(569,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(599,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(611,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(706,113): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(671,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(858,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(892,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(922,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(934,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1046,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1049,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1063,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1076,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1098,113): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -17,7 +17,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(706,113): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(706,78): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1098,78): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -26,7 +26,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(706,78): warni
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(731,112): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1123,112): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -35,7 +35,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(731,112): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(731,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1123,77): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -44,7 +44,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(731,77): warni
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(759,114): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1151,114): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -53,7 +53,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(759,114): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(759,79): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1151,79): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -62,7 +62,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(759,79): warni
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(812,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1204,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -71,7 +71,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(812,115): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(812,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1204,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -80,22 +80,16 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(812,80): warni
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(881,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(882,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(883,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(884,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(885,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(907,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(929,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(930,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(952,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(967,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(987,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1000,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1016,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1021,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1041,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1345,111): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1280,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1281,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1282,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1283,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1284,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1299,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1322,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1323,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1324,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1828,111): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -104,7 +98,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1345,111): war
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1345,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1828,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -113,7 +107,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1345,76): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1369,118): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1852,118): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -122,7 +116,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1369,118): war
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1369,83): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1852,83): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -131,7 +125,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1369,83): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1393,111): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1876,111): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -140,7 +134,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1393,111): war
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1393,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1876,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -149,7 +143,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1393,76): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1448,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1903,117): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -158,7 +152,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1448,115): war
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1448,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1903,82): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -167,7 +161,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1448,80): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1474,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1963,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -176,7 +170,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1474,115): war
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1474,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1963,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -185,7 +179,7 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1474,80): warn
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1500,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1989,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int
@@ -194,7 +188,25 @@ C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1500,115): war
           [
               T=float
           ]
-C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1500,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(1989,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(2015,115): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\coppe\Desktop\JustBeatAndShape\JustBeatAndShape\Game.cpp(2015,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=int

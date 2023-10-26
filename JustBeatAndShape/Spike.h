@@ -6,7 +6,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 
-enum SpikeTypes { DEFAULTSPIKE = 0, SPIKE2 ,BIGCIRCLE,WAVE };
+enum SpikeTypes { DEFAULTSPIKE = 0, SPIKE2 ,WAVE,CLOUDBACKGROUND,CLOUD };
 
 class Spike
 {
@@ -16,6 +16,8 @@ private:
 	sf::Texture texture2;
 	sf::Texture texture3;
 	sf::Texture texture4;
+	sf::Texture texture5;
+	sf::Texture texture6;
 	sf::IntRect currentFrame;
 	sf::Clock animationTimer;
 
